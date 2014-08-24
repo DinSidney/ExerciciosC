@@ -1,13 +1,17 @@
+//mostra como se chama uma função
+
 #include <iostream>
 using namespace std;
 
-void digaAlo() // cria função digaAlo.
+void UmaFuncao() // cria função digaAlo.
 {
-    cout << "\nAlo, mundo!";
+    cout << "... agora estamos em UmaFuncao()...\n";
 }               //fim função digaAlo.
 
 int main()
 {
-    digaAlo();  //chama a função.
+    cout << "Estamos em main()...\n";
+    UmaFuncao();
+    cout << "... e voltamos ao main()\n";
     return 0;
-}
+}               //fim de main.
