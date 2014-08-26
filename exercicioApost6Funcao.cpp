@@ -1,12 +1,18 @@
-//mostra como se chama uma função
+//mostra como se chama uma função dentro de outra.
 
 #include <iostream>
 using namespace std;
 
-void UmaFuncao() // cria função digaAlo.
+void OutraFuncao()  // cria função OutraFuncao().
+{
+    cout << "... dentro de OutraFuncao...\n";
+}                   // fim funçao OutraFuncao
+
+void UmaFuncao()    // cria função UmaFuncao().
 {
     cout << "... agora estamos em UmaFuncao()...\n";
-}               //fim função digaAlo.
+    OutraFuncao();
+}                   //fim função digaAlo.
 
 int main()
 {
@@ -14,4 +20,4 @@ int main()
     UmaFuncao();
     cout << "... e voltamos ao main()\n";
     return 0;
-}               //fim de main.
+}                   //fim de main.
